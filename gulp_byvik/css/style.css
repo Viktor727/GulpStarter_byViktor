@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Roboto-Regular";
+  font-display: swap;
+  src: url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+div {
+  background: url("..img/image.jpg") 0 0 no-repeat;
+}
+
+.webp div { background: url(..img/image.webp) 0 0 no-repeat; }
