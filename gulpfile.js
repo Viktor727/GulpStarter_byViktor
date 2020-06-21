@@ -11,6 +11,7 @@ let path = {
       js: project_folder + "/js/",
       img: project_folder + "/img/",
       fonts: project_folder + "/fonts/",
+      php: project_folder + "/"
   },
   src: {
       html: [source_folder + "/*.html", "!" + source_folder + "/_*html"],
@@ -18,12 +19,14 @@ let path = {
       js: source_folder + "/js/index.js",
       img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
       fonts: source_folder + "/fonts/*.ttf",
+      php: source_folder + "/*.php"
   },
   watch: {
       html: source_folder + "/**/*.html",
       css: source_folder + "/scss/**/*.scss",
       js: source_folder + "/js/**/*.js",
-      img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}"
+      img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
+      php: source_folder + "/**/*.php"
   },
   clean: "./" + project_folder + "/"
 };
@@ -69,6 +72,17 @@ function html() {
       .pipe(browsersync.stream());
 }
 
+function php() {
+  return src(path.src.php)
+    .pipe(fileinclude())
+    .pipe(webphtml())
+    .pipe(dest(path.build.php))
+    .pipe(browsersync.stream());
+}
+
+
+
+
 function css() {
   return src(path.src.css)
     .pipe(
@@ -88,7 +102,7 @@ function css() {
     .pipe(clean_css())
     .pipe(
       rename({
-        extname: ". min.css",
+        extname: ".min.css",
       })
     )
     .pipe(dest(path.build.css))
@@ -113,7 +127,7 @@ function js() {
 }
 
 function images() {
-  return src(path.src.img)
+  return src([path.src.img, '!src/img/favicon/*'])
     .pipe(
       webp({
         quality:70
@@ -179,6 +193,7 @@ function watchFiles() {
     gulp.watch([path.watch.css], css);
     gulp.watch([path.watch.js], js);
     gulp.watch([path.watch.img], images);
+    gulp.watch([path.watch.php], php);
 }
 
 function clean() {
@@ -211,9 +226,10 @@ gulp.task("otf2ttf", function () {
     .pipe(dest(source_folder + "/fonts/"));
 });
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts), fontsStyle);
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, php), fontsStyle);
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
+exports.php = php;
 exports.fontsStyle = fontsStyle;
 exports.fonts = fonts;
 exports.images = images;
