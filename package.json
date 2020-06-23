@@ -38,5 +38,8 @@
     "gulp-webp": "^4.0.1",
     "gulp-webp-html": "^1.0.2",
     "gulp-webpcss": "^1.1.1"
+  },
+  "dependencies": {
+    "lodash.update": "^4.10.2"
   }
 }
