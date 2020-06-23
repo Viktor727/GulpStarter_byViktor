@@ -1,0 +1,32 @@
+::-moz-selection {
+    color: white;
+    background: $primary;
+}
+
+::selection {
+    color: white;
+    background: $primary;
+}
+
+html {
+    scrollbar-color: $primary;
+    scrollbar-width: 17.5px;
+    background: #100e17;
+    color: #fff;
+}
+
+html::-webkit-scrollbar {
+    width: 17.5px;
+    height: 17.5px
+}
+
+html::-webkit-scrollbar-thumb {
+    background: $primary;
+    border-radius: 30px;
+    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .25), inset -2px -2px 2px rgba(0, 0, 0, .25);
+    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .25), inset -2px -2px 2px rgba(0, 0, 0, .25);
+}
+
+html::-webkit-scrollbar-track {
+    background: #fff;
+}

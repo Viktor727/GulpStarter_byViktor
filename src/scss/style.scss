@@ -1,23 +1,62 @@
 @mixin font($font_name, $file_name, $weight, $style) {
 
-@font-face {
-font-family: $font_name;
-font-display: swap;
-src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
-font-weight: #{$weight};
-font-style: #{$style};
-}
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url("../fonts/#{$file_name}.woff") format("woff"),
+        url("../fonts/#{$file_name}.woff2") format("woff2");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
 }
 
+// $primary: ; // primary
+// $primaryHov: ; // primary при наведені + фокус
 
+// $secondary: ; // secondary
+// $secondaryHov:; // secondary при наведені + фокус
+
+@import "libs/bootstrap";
 @import "fonts";
+// @import "modules/page-scrollbar";
 
 
-body{
+
+
+
+body {
     overflow-x: hidden;
+
+    font-size: 16px;
+    font-weight: normal;
+
 }
 
-div{
-    background: url("..img/image.jpg") 0 0 no-repeat;
-}
+// a.text-primary,
+// .text-primary {
+//     color: $primary !important;
+// }
 
+// a.text-secondary,
+// .text-secondary {
+//     color: $secondary !important;
+// }
+
+
+.btn.focus,
+.btn:focus,
+.btn:active,
+.btn:visited,
+.input,
+.input:focus,
+div,
+div:focus,
+textarea,
+textarea:focus,
+.form-control:focus,
+.form-control,
+.form-control:active{
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
