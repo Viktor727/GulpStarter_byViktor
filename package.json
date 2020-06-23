@@ -40,6 +40,6 @@
     "gulp-webpcss": "^1.1.1"
   },
   "dependencies": {
-    "lodash.update": "^4.10.2"
+    "lodash.template": "^4.5.0"
   }
 }
