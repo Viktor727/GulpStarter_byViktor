@@ -1,3 +1,12 @@
+// $primary: ; // primary
+// $primaryHov: ; // primary при наведені + фокус
+
+// $secondary: ; // secondary
+// $secondaryHov:; // secondary при наведені + фокус
+
+$fs: 20; // for rem
+
+
 @mixin font($font_name, $file_name, $weight, $style) {
 
     @font-face {
@@ -10,26 +19,29 @@
     }
 }
 
-// $primary: ; // primary
-// $primaryHov: ; // primary при наведені + фокус
+@mixin font-size($sizeValue) { 
+  font-size: ($sizeValue / $fs) + rem;
+}
 
-// $secondary: ; // secondary
-// $secondaryHov:; // secondary при наведені + фокус
+// Example:
+// .p{
+//     @include font-size(130);
+// }
+
 
 @import "libs/bootstrap";
 @import "fonts";
-// @import "modules/page-scrollbar";
-
-
-
+@import "page-scrollbar";
 
 
 body {
     overflow-x: hidden;
-
-    font-size: 16px;
     font-weight: normal;
+    font-size: $fs + px;
+}
 
+html{
+    font-size: $fs + px;
 }
 
 // a.text-primary,
@@ -41,7 +53,6 @@ body {
 // .text-secondary {
 //     color: $secondary !important;
 // }
-
 
 .btn.focus,
 .btn:focus,
@@ -60,3 +71,26 @@ textarea:focus,
     box-shadow: none;
     border: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:1199.98px) {}
+
+@media(max-width:997.98px) {}
+
+@media(max-width:767.98px) {}
+
+@media(max-width:575.98px) {}
+
+@media (max-width: 299.98px) {}
