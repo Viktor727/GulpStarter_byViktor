@@ -7075,8 +7075,12 @@ a.text-dark:hover {
 
 body {
   overflow-x: hidden;
-  font-size: 16px;
   font-weight: normal;
+  font-size: 20px;
+}
+
+html {
+  font-size: 20px;
 }
 
 .btn.focus,
