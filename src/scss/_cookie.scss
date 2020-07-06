@@ -1,0 +1,91 @@
+#accept_cookie {
+  position: fixed;
+  height: auto;
+  width: 100%;
+  background: $primary;
+  z-index: 50000;
+  border-top: 2px solid #f8f9fa;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+#accept_cookie.hide {
+  bottom: -220px;
+}
+
+#accept_cookie.show {
+  bottom: 0px;
+}
+
+#accept_cookie_inner {
+  display: inline-block;
+  width: 90%;
+  max-width: 800px;
+  color: #fff;
+  font-size: 16px;
+  padding: 30px 0;
+  font-family: Arial, Times, serif;
+}
+
+#accept_cookie_inner span {
+  font-weight: 400;
+  display: block;
+  margin-bottom: 10px;
+}
+
+#accept_cookie_inner a {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  text-decoration: none;
+}
+
+#accept_cookie_inner a:hover {
+  border: none;
+}
+
+#impressum {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.button_go_back {
+  display: inline-block;
+  max-width: 80%;
+  padding: 15px 25px;
+  background: $primary;
+  color: #fff;
+}
+
+.button_go_back:hover {
+  opacity: 0.8;
+}
+
+a {
+  cursor: pointer !important;
+}
+
+.container_main {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  min-width: 350px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.trenner {
+  position: relative;
+  width: 80%;
+  max-width: 950px;
+  height: 1px;
+  margin: 0 auto;
+  background: $primary;
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="theme-color" content="#333333" />
+  <meta name="description" content="Impressum & Datenschutz. Rechtliches und wichtiges im Überblick." />
+  <title>NOR GmbH - Impressum & Datenschutz</title>
+    <link rel="shortcut icon" sizes="196x196" href="favicon.png" type="images/x-icon">
+  <link rel="stylesheet" href="sass/style.css" type="text/css" media="all" />
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <script src="js/jquery.cookie.js"></script>
+  <!-- Cookie & Google Analytics -->
+  <script>
+    $(document).ready(function () {
+
+      if (!!$.cookie('nor_TechnicalCookie')) {
+
+      } else {
+        $(this).delay(2000).queue(function () {
+          $("#accept_cookie").removeClass("hide");
+          $("#accept_cookie").addClass("show");
+        });
+        $("#cookie_ok").click(function () {
+          $.cookie("nor_TechnicalCookie", 1);
+          $("#accept_cookie").removeClass("show");
+          $("#accept_cookie").addClass("hide");
+        });
+      };
+
+    });
+  </script>
+  <script type="text/javascript">
+    var gaProperty = 'UA-137894835-1';
+    var disableStr = 'ga-disable-' + gaProperty;
+    var ga_disabled = "Google Analytics ist deaktiviert.";
+    var ga_enabled = "Google Analytics ist aktiv.";
+    if (document.cookie.indexOf(disableStr + '=true') > -1) {
+      window[disableStr] = true;
+    }
+
+    //
+    // set or unset cookie and update status.
+    function gaOptoutToggle() {
+      if (window[disableStr]) {
+        document.cookie = disableStr + '=false; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+        window[disableStr] = false;
+        gaOptoutStatus();
+      } else {
+        document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+        window[disableStr] = true;
+        gaOptoutStatus();
+      }
+    }
+
+    //
+    // if element with id 'ga-disable' exists, change its content to current status.
+    function gaOptoutStatus() {
+      var a = document.getElementById("ga-disable");
+      if (a)
+        if (window[disableStr])
+          a.innerHTML = ga_disabled;
+        else
+          a.innerHTML = ga_enabled;
+    }
+
+    //
+    // "document ready" in plain vanilla javascript 
+    if (document.addEventListener)
+      document.addEventListener("readystatechange", change_status, false);
+    else if (document.attachEvent)
+      document.attachEvent("onreadystatechange", change_status);
+    else
+      document["onreadystatechange"] = change_status;
+
+    function change_status() {
+      if (document.readyState === "complete") {
+        if (document.removeEventListener)
+          document.removeEventListener("readystatechange", change_status, false);
+        else if (document.detachEvent)
+          document.detachEvent("onreadystatechange", change_status);
+        else
+          document["onreadystatechange"] = null;
+        gaOptoutStatus();
+      }
+    }
+
+    //
+    // Google Analytics Tracking Code
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-137894835-1']);
+    _gaq.push(['_gat._anonymizeIp']);
+    _gaq.push(['_trackPageview']);
+    (function () {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
+      '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <!-- Cookie & Google Analytics end -->
+
+
+
+</head>
+
+<body>
+
+  <div id="impressum">
+    <a href="index.html">
+      <div class="button_go_back" style="margin-bottom:30px;">Zurück zur Webseite</div>
+    </a>
+
+    <span style="text-align:left;display:block;"><b>Allgemeine Geschäftsbedingungen:</b><br><br>
+
+<p>&sect; 1 ALLGEMEINES<br />Alle von NOR GmbH angebotenen Leistungen unterliegen den nachfolgenden Allgemeinen Gesch&auml;ftsbedingungen (AGB) in der zum Zeitpunkt des Vertragsschlusses g&uuml;ltigen Fassung. Mit der Buchung erkl&auml;rt der Kunde sein Einverst&auml;ndnis zu den AGB und den vorliegenden Einstellbedingungen, welche er im Internet oder im B&uuml;ro einsehen kann.</p>
+<p>Die Geltung von Allgemeinen Gesch&auml;ftsbedingungen des Kunden ist ausgeschlossen. Abweichende, entgegenstehende oder erg&auml;nzende Allgemeine Gesch&auml;ftsbedingungen werden, selbst bei Kenntnis, nicht Vertragsbestandteil, es sei denn, sie werden ausdr&uuml;cklich von der NOR GmbH schriftlich anerkannt.</p>
+<p>&sect; 2 GELTUNGSBEREICH<br />NOR GmbHbietet den Kunden an, gegen Entgelt das von NOR GmbH betriebene Parkplatzgel&auml;nde zum Abstellen ihres Fahrzeugs zu nutzen und den Bef&ouml;rderungsservice zum Flughafen K&ouml;ln/Bonn zu nutzen.</p>
+<p>Diese Allgemeinen Gesch&auml;ftsbedingungen gelten f&uuml;r alle im Rahmen dieses Vertrages angebotenen Leistungen insbes. f&uuml;r die Parkplatzvermietung, die Bef&ouml;rderung des Kunden vom Parkplatzgel&auml;nde Steinweg 23B, 51107 K&ouml;ln zum Flughafen K&ouml;ln/Bonn, seinen R&uuml;cktransport von dort zum Betriebsgel&auml;nde sowie alle sonstigen Leistungen, die f&uuml;r den Kunden erbracht werden.</p>
+<p>&sect; 3 ANGEBOT UND VERTRAGSABSCHLUSS<br />Das Absenden der Buchung an die NOR GmbH stellt ein verbindliches Angebot des Kunden zum Vertragsschluss dar.</p>
+<p>Dies kann geschehen durch pers&ouml;nliche oder telefonische Anfrage, Buchungsanfrage per E-Mail, Fax oder online unter der Homepage www.NOR GmbH.de</p>
+<p>Der Vertrag kommt erst durch die Annahme mit einer entsprechenden, schriftlichen Best&auml;tigung durch NOR GmbH, die in der Regel binnen 24 Stunden nach Reservierungsanfrage erfolgt oder durch schriftliche Unterzeichnung eines Vertrages in Gegenwart des Kunden zustande. Der Kunde ist verpflichtet, die Reservierungsbest&auml;tigung unverz&uuml;glich auf M&auml;ngelfreiheit &uuml;ber die nachgefragten und best&auml;tigten Leistungen zu &uuml;berpr&uuml;fen und gegebenenfalls unrichtige Angaben unverz&uuml;glich mitzuteilen.</p>
+<p>Hat ein Dritter die Buchung get&auml;tigt, haftet er neben dem eigentlichen Kunden als Gesamtschuldner f&uuml;r alle vertraglichen Verpflichtungen des Kunden. Anspr&uuml;che aus dem Vertragsverh&auml;ltnis stehen ausschlie&szlig;lich dem Kunden zu und sind nur mit Zustimmung der NOR GmbH auf einen Dritten &uuml;bertragbar.</p>
+<p>&sect; 4 VERTRAGSGEGENSTAND UND LEISTUNG<br />(1) Der Vertragsgegenstand beinhaltet die Vermietung eines Stellplatzes f&uuml;r Kraftfahrzeuge zu den hier genannten Bedingungen und eventuellen sonstigen, schriftlich vereinbarten Zusatzleistungen.</p>
+<p>Weder Bewachung, &Uuml;berwachung noch Verwahrung oder die Gew&auml;hrung von Versicherungsschutz sind Gegenstand des Vertrages. &uuml;bernimmt keine Obhut oder besonderen F&uuml;rsorgepflichten und haftet insbes. nicht bei Diebstahl oder Besch&auml;digungen f&uuml;r das vom Mieter eingebrachte Fahrzeug und weitere Gegenst&auml;nde.<br />Dem Kunden wird angeraten, keine Wertgegenst&auml;nde im Fahrzeug zu belassen. Von NOR GmbH werden keinerlei Bewachungs- oder Sorgfaltspflichten f&uuml;r dennoch eingebrachte Wertgegenst&auml;nde &uuml;bernommen.</p>
+<p>Auf Wunsch des Kunden werden die Schl&uuml;ssel des Fahrzeugs f&uuml;r den gebuchten Zeitraum zur Aufbewahrung im abgeschlossenen Bereich ohne Haftung f&uuml;r das Fahrzeug &uuml;bernommen.</p>
+<p>(2) Mit der best&auml;tigten Reservierung erwirbt der Kunde das Recht, sein Fahrzeug im gebuchten Zeitraum auf einem Stellplatz auf dem Parkplatzgel&auml;nde von NOR GmbH abzustellen und mit einem Shuttle-Service zum Flughafen K&ouml;ln/Bonn gefahren und bei Wiederankunft abgeholt zu werden. Mit der Miete des Stellplatzes stellt NOR GmbH f&uuml;r den Kunden sowie f&uuml;r maximal f&uuml;nf Begleitpersonen pro Fahrzeug ohne Aufpreis den Shuttle-Service zum Flughafen K&ouml;ln/Bonn zur Verf&uuml;gung. F&uuml;r jede weitere zu transportierende Person inkl. Gep&auml;ck entstehen Mehrkosten, f&uuml;r jede weitere Person 5,00 Euro.</p>
+<p>Das Gep&auml;ck des Kunden sowie seiner Begleitpersonen wird bis zu der Menge und dem Gewicht, die entsprechend der Bedingungen der Charter- und Linienfluggesellschaften von diesen f&uuml;r kostenlose Bef&ouml;rderung festgesetzt sind, kostenlos bef&ouml;rdert. NOR GmbH ist zur Bef&ouml;rderung von &Uuml;bergep&auml;ck sowie Sperrgep&auml;ck (Surfbretter, Skier, Fahrr&auml;der o.&auml;.) nur nach gesonderter Vereinbarung verpflichtet. Das Sondergep&auml;ck muss bei der Buchung, sp&auml;testens jedoch 24 Stunden vor Anreise angemeldet werden und wird mit 5,00 Euro je Sperrgep&auml;ck berechnet.</p>
+<p>Auf Wunsch stellt NOR GmbH Kindersitze zur Verf&uuml;gung, wenn der Kunde dies sowie die notwendige Anzahl und Klasse bei der Buchungsanfrage angibt und NOR GmbH die entsprechende Reservierung mit der Buchungsannahme best&auml;tigt.</p>
+<p>(3) In der Regel erfolgt der Shuttle-Service individuell im Hinblick auf die Abflug- und Ankunftszeiten des Kunden.</p>
+<p>Die Bef&ouml;rderung zum Flughafen K&ouml;ln/Bonn erfolgt in der Regel bis unmittelbar vor das Terminal, in dem sich der Check-in-Schalter f&uuml;r den Flug des Kunden befindet. Die Ankunft am Parkplatz- und Ankunftszeit f&uuml;r den R&uuml;ckflug und die Fluggesellschaft sind vom Kunden in der Buchungsanfrage anzugeben.</p>
+<p>Der R&uuml;cktransport vom Flughafen K&ouml;ln/Bonn zum Parkplatzgel&auml;nde von NOR GmbH erfolgt in der Regel zeitnah. Der Kunde hat NOR GmbH bei Ankunft, nach Erhalt des Gep&auml;cks, telefonisch zu benachrichtigen. NOR GmbH wird daraufhin ein Fahrzeug zur Abholung schicken. NOR GmbH beh&auml;lt sich jedoch Sammelbef&ouml;rderung vor, bei Sto&szlig;zeiten k&ouml;nnen Wartezeiten bis zu 45 Minuten eintreten.</p>
+<p>Sollte f&uuml;r den Kunden die Notwendigkeit weiterer Fahrten zum oder vom Flughafen K&ouml;ln/Bonn bestehen, hat NOR GmbH das Recht f&uuml;r jede weitere Fahrt ein gesondertes Entgelt in H&ouml;he von 20,00 Euro zu erheben.</p>
+<p>(4) Entfernt der Kunde sein Fahrzeug nach Ablauf der vertraglichen Mietzeit nicht, tritt keine Verl&auml;ngerung des Mietverh&auml;ltnisses auf unbestimmte Zeit ein und er schuldet f&uuml;r die Zeit bis zur Entfernung des Fahrzeugs eine Nutzungsentsch&auml;digung pauschal in H&ouml;he von 10&euro; pro Tag. Die Geltung von &sect; 545 BGB wird ausdr&uuml;cklich ausgeschlossen.</p>
+<p>Kommt der Kunde nach schriftlicher Aufforderung unter Fristsetzung seiner R&auml;umungspflicht nicht nach, so ist NOR GmbH berechtigt, das Fahrzeug des Kunden vom Betriebsgel&auml;nde zu entfernen. Anfallende Kosten hat der Kunde zu tragen.</p>
+<p>NOR GmbH st berechtigt, das eingestellte Fahrzeug auf Kosten und Gefahr des Mieters vom Parkplatzgel&auml;nde zu entfernen bzw. entfernen zu lassen, insbesondere, wenn der Mietvertrag beendet und der Mieter nicht erreichbar ist; ein eingestelltes Fahrzeug durch M&auml;ngel eine allgemeine Gefahr darstellt (z.B. undichter Tank u.&auml;.); ein eingestelltes Fahrzeug polizeilich nicht zugelassen ist oder w&auml;hrend der Vertragsdauer durch die Beh&ouml;rden aus dem Verkehr gezogen wurde; das Fahrzeug unberechtigt abgestellt wurde;</p>
+<p>F&uuml;r diese F&auml;lle steht NOR GmbH bis zur Entfernung des Fahrzeugs eine Tagespauschale von 10&euro; zu.</p>
+<p>&sect; 5 BENUTZUNGSBESTIMMUNGEN</p>
+<p>(1) Auf dem Parkplatzgel&auml;nde gelten die Bestimmungen der StVO, soweit nicht nachstehend Sonderregelungen bestimmt werden. Auf dem Parkplatzgel&auml;nde darf nur im Schritttempo gefahren werden.</p>
+<p>Den Anweisungen des Personals bei Einfahrt auf dem Parkplatzgel&auml;nde und Einstellen des Pkw s oder bei der Abholung und Ausfahrt ist Folge zu leisten.</p>
+<p>Fahrzeuge d&uuml;rfen nur innerhalb der markierten Stellpl&auml;tze in der Weise abgestellt werden, dass jederzeit das ungehinderte Ein- und Ausparken auf den benachbarten Einstellpl&auml;tzen m&ouml;glich ist. Verst&ouml;&szlig;t der Kunde gegen diese Bestimmung, so ist NOR GmbH berechtigt, au&szlig;erhalb dieser Fl&auml;chen abgestellte Fahrzeuge und, insbesondere auf den Verkehrsfl&auml;chen geparkte Fahrzeuge durch geeignete Ma&szlig;nahmen auf Kosten des Kunden zum zugewiesen Einstellplatz zu verbringen bzw. notfalls kostenpflichtig abschleppen zu lassen, insbesondere bei behinderndem Abstellen des Fahrzeugs.</p>
+<p>(2) Nach erfolgter Einstellung des Fahrzeugs ist der Mieter verpflichtet, das Fahrzeug ordnungsgem&auml;&szlig; zu verschlie&szlig;en und verkehrs&uuml;blich zu sichern.</p>
+<p>Jeder Kunde und die von ihm beauftragten Personen haben sich so zu verhalten, dass Gef&auml;hrdungen und Sch&auml;digungen Dritter ausgeschlossen sind. Im Falle der Besch&auml;digung des Parkplatzgel&auml;ndes oder seiner Einrichtungen werden die entstandenen Kosten dem Kunden nach Beseitigung in Rechnung gestellt.</p>
+<p>(3) Der Mieter haftet f&uuml;r ein eingestelltes Fahrzeug bei &Ouml;l- oder sonstigen Fl&uuml;ssigkeitsverlusten und allen dadurch verursachten Verunreinigungen. Dem Kunden ist es untersagt, auf dem Betriebsgel&auml;nde Reparaturen vorzunehmen (Ausnahme durch autorisierte Pannennotdienste), Fahrzeuge zu waschen oder zu reinigen, K&uuml;hlwasser, Kraftstoffe oder &Ouml;le einzuf&uuml;llen oder abzulassen bzw. im Fahrzeug befindlichen M&uuml;ll auf dem Parkplatzgel&auml;nde zu entsorgen sowie Fahrzeuge mit undichten Tank oder Motor abzustellen.</p>
+<p>Auf dem Parkplatzgel&auml;nde, insbes. in der Halle ist das Rauchen und die Verwendung von Feuer untersagt, ausgenommen in den f&uuml;r das Rauchen gekennzeichneten Bereichen.</p>
+<p>Verunreinigungen, die der Kunde zu vertreten hat, sind unverz&uuml;glich und ordnungsgem&auml;&szlig; durch diesen zu beseitigen. Andernfalls ist NOR GmbH berechtigt, diese Verunreinigungen auf Kosten des Kunden zu beseitigen.</p>
+<p>Im Falle der Verunreinigung des Bodens oder des Grundwassers muss die Beseitigung durch ein autorisiertes Fachunternehmen auf Kosten des Kunden erfolgen. In diesem F&auml;llen hat der Kunde kein Recht zur Selbstvornahme.</p>
+<p>(4) Der Aufenthalt auf dem Parkplatzgel&auml;nde zu anderen Zwecken der ans&auml;ssigen Firmen auch gestattet. Hierbei ist den Anweisungen von NOR GmbH, ihrer Mitarbeiter und Erf&uuml;llungsgehilfen Folge zu leisten. W&auml;hrend eventueller Wartezeiten f&uuml;r den Transport zum Flughafen K&ouml;ln/Bonn ist ein Wartebereich vorhanden, der zum Aufenthalt bestimmt ist.</p>
+<p>&nbsp;</p>
+<p>&sect; 6 ENTGELD UND BEZAHLUNG</p>
+<p>(1) F&uuml;r die Preisberechnung gelten die angegebenen Tagespreise zum Zeitpunkt des Vertragsschlusses.</p>
+<p>Zeitangaben f&uuml;r Parkleistungen werden nach angefangenen Kalendertagen berechnet. Ein Recht auf R&uuml;ckverg&uuml;tung bei vorzeitiger Beendigung des Vertrages besteht nicht. Nicht in Anspruch genommene Parktage verfallen.</p>
+<p>Die Reservierungsbest&auml;tigung beinhaltet das endg&uuml;ltige Entgelt f&uuml;r die zugesagte Leistung, es sei denn, der Kunde &uuml;berzieht die Buchungszeit oder w&uuml;nscht zus&auml;tzliche kostenpflichtige Leistungen, die zum Zeitpunkt der Best&auml;tigung nicht bekannt waren.</p>
+<p>(2) Das Parkentgelt wird sofort mit Abschluss des Vertrages f&auml;llig.</p>
+<p>Ist der Kunde zur Bezahlung nicht in der Lage, besteht im Einzelfall ein Recht auf &Uuml;berlassung von Wertgegenst&auml;nden an NOR GmbH (Schmuck, Handy u. dgl.) im 2-fachen Wert des geschuldeten Betrages zuz&uuml;glich einer Bearbeitungsgeb&uuml;hr von 30,00 Euro. Der Wertgegenstand ist innerhalb einer Frist von 4 Wochen ab &Uuml;berlassung gegen Zahlung des geschuldeten Entgelts auszul&ouml;sen. Erfolgt dies nicht innerhalb der 4 Wochen-Frist geht der Wertgegenstand in das Eigentum von NOR GmbH &uuml;ber.<br />(3) Bei elektronischer Zahlungsweise erteilt der Kunde im Falle einer nicht abbuchbaren Forderung seiner Bank die ausdr&uuml;ckliche Erlaubnis, NOR GmbH oder einer von ihr beauftragten Person die Anschrift des Kunden und eventuelle weitere Informationen, die dem Ausgleich der Forderung dienlich sind, mitzuteilen.</p>
+<p>Mit der elektronischen Zahlungsweise erkennt der Kunde die sich aus der Teilnahme am Abbuchungsverfahren geltenden Rechte und Pflichten mit seiner PIN, auch ohne Unterschrift, ausdr&uuml;cklich an. Die Preise schlie&szlig;en die jeweilige Mehrwertsteuer mit ein. Die Geb&uuml;hren der elektronischen Zahlungsweise tr&auml;gt der Kunde.</p>
+<p><br />&sect; 7 Widerrufsrecht</p>
+<p>Sie k&ouml;nnen Ihre Vertragserkl&auml;rung innerhalb von 14 Tagen ohne Angabe von Gr&uuml;nden in Textform (z. B. Brief, Fax, E-Mail) widerrufen. Die Frist beginnt nach Erhalt dieser Belehrung in Textform, jedoch nicht vor Vertragsschluss und auch nicht vor Erf&uuml;llung unserer Informationspflichten gem&auml;&szlig; Artikel 246 &sect; 2 in Verbindung mit &sect; 1 Absatz 1 und 2 EGBGB sowie unserer Pflichten gem&auml;&szlig; &sect; 312g Absatz 1 Satz 1 BGB in Verbindung mit Artikel 246 &sect; 3 EGBGB. Zur Wahrung der Widerrufsfrist gen&uuml;gt die rechtzeitige Absendung des Widerrufs. Der Widerruf ist zu richten an:<br /><br />NOR GmbH</p>
+<p>E-Mail: NOR GmbH@gmail.com <br />Steinweg 23B, K&ouml;ln<br /><br />Widerrufsfolgen<br />Im Falle eines wirksamen Widerrufs sind die beiderseits empfangenen Leistungen zur&uuml;ckzugew&auml;hren und ggf. gezogene Nutzungen (z. B. Zinsen) herauszugeben. K&ouml;nnen Sie uns die empfangene Leistung sowie Nutzungen (z. B. Gebrauchsvorteile) nicht oder teilweise nicht oder nur in verschlechtertem Zustand zur&uuml;ckgew&auml;hren beziehungsweise herausgeben, m&uuml;ssen Sie uns insoweit Wertersatz leisten. Dies kann dazu f&uuml;hren, dass Sie die vertraglichen Zahlungsverpflichtungen f&uuml;r den Zeitraum bis zum Widerruf gleichwohl erf&uuml;llen m&uuml;ssen. Verpflichtungen zur Erstattung von Zahlungen m&uuml;ssen innerhalb von 30 Tagen erf&uuml;llt werden. Die Frist beginnt f&uuml;r Sie mit der Absendung Ihrer Widerrufserkl&auml;rung, f&uuml;r uns mit deren Empfang.<br />Besondere Hinweise<br />Ihr Widerrufsrecht erlischt vorzeitig, wenn der Vertrag von beiden Seiten auf Ihren ausdr&uuml;cklichen Wunsch vollst&auml;ndig erf&uuml;llt ist, bevor Sie Ihr Widerrufsrecht ausge&uuml;bt haben. Ende der Widerrufsbelehrung</p>
+<p><br />&sect; 8 R&Uuml;CKTRITT UND SCHADENSERSATZ<br />1. NOR GmbH r&auml;umt dem Kunden ein R&uuml;cktrittsrecht ein. Eine Stornierung ist kostenfrei, wenn die Stornierung sp&auml;testens bis zu 24 Stunden vor vereinbartem Mietbeginn schriftlich oder per E-Mail erfolgt. Bei einer sp&auml;teren Stornierung oder g&auml;nzlich unterbliebener Anreise (NOSHOW) ist NOR GmbH berechtigt, eine Pauschale in H&ouml;he von 50% des Rechnungsbetrages zu erheben. Dem Kunden steht der Nachweis frei, dass NOR GmbH ein geringerer Schaden entstanden ist, als die vereinbarte R&uuml;cktrittspauschale.</p>
+<p>(2) Ein beiderseitiger R&uuml;cktritt aus wichtigem Grund bleibt hiervon unber&uuml;hrt. Dieser liegt vor bei h&ouml;herer Gewalt, Krankheit oder Todesfall, erheblicher Verm&ouml;gensverschlechterung seit Vertragsschluss bzw. der Er&ouml;ffnung oder Beantragung des Insolvenzverfahrens &uuml;ber das Verm&ouml;gen einer der Vertragsparteien, sowie bei berechtigter Besorgnis seitens NOR GmbH, die Inanspruchnahme der gebuchten Leistungen durch den Kunden werde die Betriebssicherheit oder das Ansehen des Unternehmens gef&auml;hrden.</p>
+<p>Die das K&uuml;ndigungsrecht aus&uuml;bende Partei hat vor Aus&uuml;bung des K&uuml;ndigungsrechts aus wichtigem Grund die andere Partei hier&uuml;ber unverz&uuml;glich schriftlich in Kenntnis zu setzen. Ein Anspruch auf Schadensersatz ist in diesen F&auml;llen ausgeschlossen.</p>
+<p>(3) Bei alkoholisierten oder randalierenden Personen ist NOR GmbH berechtigt, unter Ausschluss von Schadensersatzanspr&uuml;chen des Kunden wegen Nicht- oder Schlechterf&uuml;llung, eine Bef&ouml;rderung zu verweigern</p>
+<p>&sect; 9 HAFTUNG UND HAFTUNGSAUSSCHLUSS<br />1. NOR GmbH haftet f&uuml;r alle durch sie, ihre Angestellten oder Erf&uuml;llungsgehilfen vors&auml;tzlich oder grob fahrl&auml;ssig verursachten Sch&auml;den auf Grund der gesetzlichen Haftungsbestimmungen wegen Verletzung des Lebens, des K&ouml;rpers oder der Gesundheit.</p>
+<p>Bei leichter Fahrl&auml;ssigkeit tritt eine Schadenshaftung nur dann ein, wenn diese auf Verletzung einer wesentlichen Vertragspflicht oder einer Pflicht, die die Vertragsdurchf&uuml;hrung erst erm&ouml;glicht und auf deren Einhaltung der Kunde regelm&auml;&szlig;ig vertrauen darf (Kardinalspflicht), in einer den Vertragszweck gef&auml;hrdenden Weise zur&uuml;ckzuf&uuml;hren ist. In diesen F&auml;llen ist die Haftung auf den vorhersehbaren vertragstypischen Schaden begrenzt. Ein Ersatzanspruch des Kunden auf Minderung oder Schadensersatz entf&auml;llt dann, wenn dieser den Schaden zwecks Schadensfeststellung nicht unverz&uuml;glich und noch vor Verlassen des Parkplatzgel&auml;ndes von NOR GmbH oder dem Aufsichtspersonal<br />gemeldet hat. Jegliche weitere Haftung, wie z.B. Sch&auml;den am Gep&auml;ck und dessen Inhalts beim Transport ist ausgeschlossen. Der Kunde stellt NOR GmbH insoweit von s&auml;mtlichen Anspr&uuml;chen Dritter frei.</p>
+<p>Der Kunde stellt NOR GmbH frei bei Sch&auml;den h&ouml;herer Gewalt sowie bei Sch&auml;den durch innere und &auml;u&szlig;ere Unruhen, Kriegsereignisse, Vandalismus und elementare Naturkr&auml;fte.</p>
+<p>(2) NOR GmbH haftet nicht f&uuml;r Besch&auml;digung oder Zerst&ouml;rung von Kraftfahrzeugen einschlie&szlig;lich deren Inhalte und Ladungen, die durch Handlungen Dritter, z.B. durch andere Mieter oder sonstige Personen verursacht sind. Dies gilt auch f&uuml;r Entwendungen und Abhandenkommen von Kraftfahrzeugen, Fahrzeugteilen, Fahrzeuginhalten und Fahrzeugladung (z.B. Autoradio, Autotelefon, pers&ouml;nliche Gegenst&auml;nde, Computer, Fotoausr&uuml;stung, Sportausr&uuml;stung und &auml;hnliches). Besch&auml;digungen sind von NOR GmbH und dem anwesenden Personal unverz&uuml;glich vor verlassen des Parkplatzgel&auml;ndes mitzuteilen.</p>
+<p>(3) NOR GmbH ist mit gr&ouml;&szlig;ter Sorgfalt bem&uuml;ht, den Kunden rechtzeitig zu einer mitgeteilten Abflugzeit zum Flughafen K&ouml;ln/Bonn zu bef&ouml;rdern. Die Rechtzeitigkeit der Ankunft ist nicht Vertragsgegenstand. Schadensersatzanspr&uuml;che, insbesondere solche aus nicht erreichten Abfl&uuml;gen und sonstigen verpassten Terminen sind ausgeschlossen. Die rechtzeitige Ankunft auf dem Parkplatzgel&auml;nde liegt in der Verantwortung des Kunden und ausschlie&szlig;lich im Risiko des Kunden. Ersatzanspr&uuml;che bei Nichtinanspruchnahme der gebuchten Leistungen auf Grund von versp&auml;teter Anfahrt des Kunden sind ausgeschlossen.</p>
+<p>(4) Mit dem Befahren des Parkplatzgel&auml;nde versichert der Kunde, dass der Fahrer im Besitz der erforderlichen Fahrerlaubnis ist und das Fahrzeug den gesetzlich vorgeschriebenen Versicherungsschutz bis zum Verlassen des Parkplatzgel&auml;nde besitzt. Auf Verlangen sind den Mitarbeitern von NOR GmbH und deren Erf&uuml;llungsgehilfen Fahrerlaubnis und Fahrzeugschein vorzulegen. In besonderen F&auml;llen kann auch der Nachweis ausreichenden dar&uuml;ber hinausgehenden Versicherungsschutzes verlangt werden. K&ouml;nnen die vorbezeichneten Dokumente nicht vorgelegt werden, ist NOR GmbH berechtigt, die Vertragserf&uuml;llung abzulehnen und die Zufahrt zum Betriebsgel&auml;nde zu verweigern.</p>
+<p>In diesen F&auml;llen hat der Kunde keinen Anspruch auf Schadensersatz.</p>
+<p>Der Kunde versichert, dass das Fahrzeug sein Eigentum ist oder er es mit Einverst&auml;ndnis des Eigent&uuml;mers nutzt.</p>
+<p>(5) Das Parkplatzgel&auml;nde und die Betriebseinrichtungen sind pfleglich und sachgem&auml;&szlig; zu behandeln. Im Falle der Besch&auml;digung werden die entstandenen Kosten dem Kunden nach Beseitigung in Rechnung gestellt.</p>
+<p>Unabh&auml;ngig vom Verschulden haftet der Kunde f&uuml;r alle Sch&auml;den, die infolge technischer Defekte durch das von ihm oder von ihm beauftragte Dritte auf das Parkplatzgel&auml;nde NOR GmbH eingebrachte Fahrzeug verursacht werden (z.B. Kraftstoff, &Ouml;lverlust, Explosion, K&uuml;hlwasserverlust). Dies gilt auch dann, wenn derartige Defekte nicht in dem Zustandsbericht &uuml;ber das Fahrzeug aufgenommen worden sind oder bislang unbekannt waren.</p>
+<p>Der Kunde tritt eigene Anspr&uuml;che gegen Dritte oder Versicherungen aus einem Schadensfall im Voraus an NOR GmbH ab, soweit NOR GmbH aus einem solchen Schadensereignis ihrerseits in Anspruch genommen wird.</p>
+<p><br />&sect; 10 VALET-SERVICE UND ERWEITERTE LEISTUNGEN</p>
+<p>(1) Auf Wunsch bietet den Kunden das Optimum an Service in Form des Valet-Parkings an. NOR GmbH erm&ouml;glicht den Kunden, die einen Stellplatz auf dem Parkplatzgel&auml;nde von NOR GmbH mieten, gegen Entgelt die Inanspruchnahme von Kfz-Dienstleistungen f&uuml;r die abgestellten Fahrzeuge.</p>
+<p>Entsprechende Buchungsanfragen von Kunden k&ouml;nnen in der Regel nur ber&uuml;cksichtigt werden, wenn die Anfrage des Kunden mindestens 3 Tage vor Beginn der Einstellzeit erfolgt. NOR GmbH stellt den Kunden in begrenzter Anzahl auch Hallenparkpl&auml;tze zur Verf&uuml;gung. Diese d&uuml;rfen nicht von mit Fl&uuml;ssiggas (LPG) betriebenen Fahrzeugen befahren werden. Bei Buchung eines solchen Parkplatzes ist daher verbindlich die Treibstoffart des Fahrzeugs unter Bemerkung mit anzugeben.</p>
+<p>(2) Das Fahrzeug wird durch einen Mitarbeiter, Erf&uuml;llungsgehilfen oder Beauftragten von NOR GmbH vom Flughafen K&ouml;ln/Bonn zum Parkplatzgel&auml;nde und wieder zur&uuml;ck gefahren. F&uuml;r den gebuchten Zusatzservice ist NOR GmbH erechtigt entsprechende Fahrten zur&uuml;ckzulegen. Diesen Service bietet NOR GmbH aufgrund der deutschen Zollbestimmungen nur f&uuml;r Fahrzeuge an, die in einem EU-Mitgliedstaat zugelassen sind.</p>
+<p>In allen vorgenannten F&auml;llen ist es erforderlich, dass der Kunde den Fahrzeugschl&uuml;ssel an NOR GmbH aush&auml;ndigt. Bei den angebotenen Kfz-Dienstleistungen und dem Valet-Service ist das Kundenfahrzeug w&auml;hrend der &Uuml;berf&uuml;hrungsfahrt vom Flughafen K&ouml;ln/Bonn zum Parkplatzgel&auml;nde und zur&uuml;ck bzw. f&uuml;r Fahrten der zus&auml;tzlichen Serviceleistungen ausschlie&szlig;lich &uuml;ber die Haftpflichtversicherung des Kunden versichert.</p>
+<p>(3) Bei der &Uuml;bernahme des Fahrzeugs werden augenscheinliche Besch&auml;digungen wie Schrammen oder Unfallbesch&auml;digungen protokolliert. Da Kratzer nicht auf Anhieb zu sehen sind (vor allem, wenn das Fahrzeug nass oder verdreckt ist) und sehr viel Zeit bei der Kontrolle in Anspruch nehmen, werden diese nicht protokolliert und k&ouml;nnen nicht Gegenstand von Beanstandungen sein. Steinschl&auml;ge bei der &Uuml;berfahrt zum/vom Parkplatz, zum/vom Flughafen k&ouml;nnen nicht geltend gemacht werden, da diese w&auml;hrend der &Uuml;berfahrt nicht vermeidbar sind.</p>
+<p>Eine Schnell&uuml;bergabe ist die Regel. Falls vom Kunden bei &Uuml;bergabe an NOR GmbH eine eingehende Kontrolle erw&uuml;nscht wird, so ist dies vom Kunden bei der Buchung anzugeben und ein Zeitraum von mind. 20 Min. zus&auml;tzlich einzukalkulieren.</p>
+<p><br />&sect; 11 DATENSCHUTZ</p>
+<p>Die im Zusammenhang mit dem bestehenden Vertrag vom Kunden zur Verf&uuml;gung gestellten Daten werden von NOR GmbH gem&auml;&szlig; den Bestimmungen des Bundesdatenschutzgesetzes gesch&uuml;tzt. Der Kunde erkl&auml;rt sich damit einverstanden, dass diese Daten von NOR GmbH im Rahmen der Vertragsbeziehungen<br />elektronisch verarbeitet und gespeichert werden.</p>
+<p><br />&sect; 12 SCHLUSSBESTIMMUNGEN</p>
+<p>(1) &Auml;nderungen und Erg&auml;nzungen des Vertrages bed&uuml;rfen der Schriftform. Dies gilt auch f&uuml;r die Ab&auml;nderung dieser Schriftformklausel.</p>
+<p>(2) Sollten einzelne Bestimmungen dieser Allgemeinen Gesch&auml;ftsbedingungen ganz oder teilweise unwirksam sein oder werden oder eine Regelungsl&uuml;cke enthalten, so wird hierdurch die G&uuml;ltigkeit der &uuml;brigen Bestimmungen nicht ber&uuml;hrt. Die ganz oder teilweise unwirksame oder fehlende Regelung soll durch eine Regelung ersetzt werden, die dem Sinn und dem wirtschaftlichen Erfolg der unwirksamen oder fehlenden nahe kommt.</p>
+<p>(3) Ist der Kunde Kaufmann oder hat der Kunde keinen allgemeinen Gerichtsstand in Deutschland, so wird als Gerichtsstand f&uuml;r alle Rechtsstreitigkeiten, gleich aus welchem Rechtsgrund, der Sitz von NOR GmbH vereinbart.</p>
+<p>Gerichtsstand ist Siegburg und Erf&uuml;llungsort ist der Ort des Betriebsgel&auml;ndes und Sitz der Firma, Troisdorf, Am Wildzaun 2.</p>
+<p>Auf diesen Vertrag finden die Bestimmungen des Deutschen Rechts Anwendung.<br /><br />NOR GmbH<br />Am Wildzaun 2<br />53842 Troisdorf<br />Deutschland</p>
+<p>E-Mail: NOR GmbH@gmail.com <br />Internet: www.NOR GmbH.de</p>
+<p>Inhaber: Angelo Pinto</p>
+<p><br />Stand: 30.06.2019</p>
+<p>Mit dem Datum der Ausfertigung dieser Allgemeinen Gesch&auml;ftsbedingungen verlieren alle zuvor verwendeten Allgemeinen Gesch&auml;ftsbedingungen (AGB) für NOR GmbH ihre G&uuml;ltigkeit.</p>
+
+
+
+        <br><br>
+
+    </span>
+    <a href="index.html">
+      <div class="button_go_back">Zurück zur Webseite</div>
+    </a>
+  </div>
+
+</body>
+
+</html>
