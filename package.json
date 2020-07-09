@@ -1,10 +1,13 @@
 {
-  "name": "gulp_byvik",
+  "name": "gulp_starter",
   "version": "1.0.0",
   "description": "Зборка Gulp",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node gulpfile.js",
+    "clear": "rm -rf './gulp_byvik' && mkdir gulp_byvik",
+    "dev": "gulp",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
