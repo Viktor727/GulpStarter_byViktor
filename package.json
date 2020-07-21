@@ -20,9 +20,9 @@
   },
   "homepage": "https://github.com/Viktor727/GulpStarter_byViktor#readme",
   "devDependencies": {
-    "@babel/core": "^7.10.3",
-    "@babel/preset-env": "^7.10.3",
-    "browser-sync": "^2.26.7",
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "browser-sync": "^2.26.10",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
