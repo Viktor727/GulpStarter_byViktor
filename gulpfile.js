@@ -54,7 +54,9 @@ const { src, dest, tree } = require("gulp"),
   ttf2woff = require("gulp-ttf2woff"),
   ttf2woff2 = require("gulp-ttf2woff2"),
   fonter = require("gulp-fonter"),
-  realFavicon = require('gulp-real-favicon');
+  realFavicon = require('gulp-real-favicon'),
+  sourcemaps = require('gulp-sourcemaps');
+
 
 
 
@@ -90,6 +92,7 @@ function php() {
 
 function css() {
   return src(path.src.css)
+    .pipe(sourcemaps.init())
     .pipe(
       scss({
         outputStyle: "expanded",
@@ -110,12 +113,19 @@ function css() {
         extname: ".min.css",
       })
     )
+    .pipe(sourcemaps.write("./", {
+      mapFile: function (mapFilePath) {
+        // source map files are named *.map instead of *.js.map
+        return mapFilePath.replace('.css.map', '.css.map');
+      }
+    }))
     .pipe(dest(path.build.css))
     .pipe(browsersync.stream());
 }
 
 function js() {
   return src(path.src.js)
+    .pipe(sourcemaps.init())
     .pipe(fileinclude())
     .pipe(babel({
         presets: ['@babel/env']
@@ -127,6 +137,13 @@ function js() {
         extname: ".min.js",
       })
     )
+    .pipe(dest(path.build.js))
+    .pipe(sourcemaps.write("./", {
+      mapFile: function (mapFilePath) {
+        // source map files are named *.map instead of *.js.map
+        return mapFilePath.replace('.js.map', '.js.map');
+      }
+    }))
     .pipe(dest(path.build.js))
     .pipe(browsersync.stream());
 }
