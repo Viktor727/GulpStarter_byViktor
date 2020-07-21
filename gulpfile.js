@@ -1,34 +1,34 @@
 /*jshint esversion: 6 */
-let project_folder = require("path").basename(__dirname);
-let source_folder = "src";
+const projectFolder = require("path").basename(__dirname);
+const sourceFolder = "src";
 
-let fs = require("fs");
+const fs = require("fs");
 
-let path = {
+const path = {
   build: {
-      html: project_folder + "/",
-      css: project_folder + "/css/",
-      js: project_folder + "/js/",
-      img: project_folder + "/img/",
-      fonts: project_folder + "/fonts/",
-      php: project_folder + "/"
+      html: projectFolder + "/",
+      css: projectFolder + "/css/",
+      js: projectFolder + "/js/",
+      img: projectFolder + "/img/",
+      fonts: projectFolder + "/fonts/",
+      php: projectFolder + "/"
   },
   src: {
-      html: [source_folder + "/*.html", "!" + source_folder + "/_*html"],
-      css: source_folder + "/scss/style.scss",
-      js: source_folder + "/js/index.js",
-      img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
-      fonts: source_folder + "/fonts/*.ttf",
-      php: source_folder + "/*.php"
+      html: [sourceFolder + "/*.html", "!" + sourceFolder + "/_*html"],
+      css: sourceFolder + "/scss/style.scss",
+      js: sourceFolder + "/js/index.js",
+      img: sourceFolder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
+      fonts: sourceFolder + "/fonts/*.ttf",
+      php: sourceFolder + "/*.php"
   },
   watch: {
-      html: source_folder + "/**/*.html",
-      css: source_folder + "/scss/**/*.scss",
-      js: source_folder + "/js/**/*.js",
-      img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
-      php: source_folder + "/**/*.php"
+      html: sourceFolder + "/**/*.html",
+      css: sourceFolder + "/scss/**/*.scss",
+      js: sourceFolder + "/js/**/*.js",
+      img: sourceFolder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
+      php: sourceFolder + "/**/*.php"
   },
-  clean: "./" + project_folder + "/"
+  clean: "./" + projectFolder + "/"
 };
 
 // File where the favicon markups are stored
@@ -41,8 +41,8 @@ const { src, dest, tree } = require("gulp"),
   del = require("del"),
   scss = require("gulp-sass"),
   autoprefixer = require("gulp-autoprefixer"),
-  group_media = require("gulp-group-css-media-queries"),
-  clean_css = require("gulp-clean-css"),
+  groupMedia = require("gulp-group-css-media-queries"),
+  cleanCss = require("gulp-clean-css"),
   rename = require("gulp-rename"),
   uglify = require("gulp-uglify-es").default,
   babel = require("gulp-babel"),
@@ -62,7 +62,7 @@ const { src, dest, tree } = require("gulp"),
 function browserSync() {
   browsersync.init({
       server: {
-          baseDir: "./" + project_folder + "/",
+          baseDir: "./" + projectFolder + "/",
       },
       port: 3000,
       notify: false
@@ -95,7 +95,7 @@ function css() {
         outputStyle: "expanded",
       })
     )
-    .pipe(group_media())
+    .pipe(groupMedia())
     .pipe(
       autoprefixer({
         overrideBrowserslist: ["last 5 versions"],
@@ -104,7 +104,7 @@ function css() {
     )
     .pipe(webpcss())
     .pipe(dest(path.build.css))
-    .pipe(clean_css())
+    .pipe(cleanCss())
     .pipe(
       rename({
         extname: ".min.css",
@@ -164,18 +164,18 @@ function fonts(){
 }
 
 function fontsStyle(params) {
-  let file_content = fs.readFileSync(source_folder + "/scss/fonts.scss");
-  if (file_content == "") {
-    fs.writeFile(source_folder + "/scss/fonts.scss", "", cb);
+  const fileContent = fs.readFileSync(sourceFolder + "/scss/fonts.scss");
+  if (fileContent == "") {
+    fs.writeFile(sourceFolder + "/scss/fonts.scss", "", cb);
     return fs.readdir(path.build.fonts, function (err, items) {
       if (items) {
-        let c_fontname;
+        let cFontname;
         for (var i = 0; i < items.length; i++) {
           let fontname = items[i].split(".");
           fontname = fontname[0];
-          if (c_fontname != fontname) {
+          if (cFontname != fontname) {
             fs.appendFile(
-              source_folder + "/scss/fonts.scss",
+              sourceFolder + "/scss/fonts.scss",
               '@include font("' +
                 fontname +
                 '", "' +
@@ -184,7 +184,7 @@ function fontsStyle(params) {
               cb
             );
           }
-          c_fontname = fontname;
+          cFontname = fontname;
         }
       }
     });
@@ -207,7 +207,7 @@ function clean() {
 
 gulp.task("svgSprite", function () {
   return gulp
-    .src([source_folder + "/iconsprite/*.svg"])
+    .src([sourceFolder + "/iconsprite/*.svg"])
     .pipe(
       svgSprite({
         mode: {
@@ -222,25 +222,25 @@ gulp.task("svgSprite", function () {
 });
 
 gulp.task("otf2ttf", function () {
-  return src([source_folder + "/fonts/*.otf"])
+  return src([sourceFolder + "/fonts/*.otf"])
     .pipe(
       fonter({
         formats: ["ttf"],
       })
     )
-    .pipe(dest(source_folder + "/fonts/"));
+    .pipe(dest(sourceFolder + "/fonts/"));
 });
 // *.{jpg,png,svg,gif,ico,webp}
 // /img/favicon/
-// Generate the icons. This task takes a few seconds to complete.
+// Generate the icons. This task takes a few seconds to compconste.
 // You should run it at least once to create the icons. Then,
 // you should run it whenever RealFaviconGenerator updates its
 // package (see the check-for-favicon-update task below).
 gulp.task("generate-favicon", function (done) {
   realFavicon.generateFavicon(
     {
-      masterPicture: source_folder + "/img/favicon/favicon.png",
-      dest: source_folder + "/img/favicon/",
+      masterPicture: sourceFolder + "/img/favicon/favicon.png",
+      dest: sourceFolder + "/img/favicon/",
       iconsPath: "/",
       design: {
         ios: {
@@ -319,33 +319,8 @@ gulp.task("check-for-favicon-update", function (done) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, php), fontsStyle);
-let watch = gulp.parallel(build, watchFiles, browserSync);
+const build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, php), fontsStyle);
+const watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.php = php;
 exports.fontsStyle = fontsStyle;
