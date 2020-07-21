@@ -69,23 +69,34 @@ function browserSync() {
       port: 3000,
       notify: false
   });
+  // browsersync.init({
+  //   proxy: "gulp_byvik.dev/index.php"
+  // });
 }
 
 function html() {
-  return src(path.src.html)
+      src(path.src.html)
       .pipe(fileinclude())
       .pipe(webphtml())
-      .pipe(dest(path.build.html))
+      .pipe(dest(path.build.html));
+    return src(path.src.php)
+      .pipe(fileinclude())
+      .pipe(webphtml())
+      .pipe(dest(path.build.php))
       .pipe(browsersync.stream());
 }
 
-function php() {
-  return src(path.src.php)
-    .pipe(fileinclude())
-    .pipe(webphtml())
-    .pipe(dest(path.build.php))
-    .pipe(browsersync.stream());
-}
+// function php() {
+//      src(path.src.php)
+//     .pipe(fileinclude())
+//     .pipe(webphtml())
+//     .pipe(dest(path.build.php));
+//   return src(path.src.html)
+//     .pipe(fileinclude())
+//     .pipe(webphtml())
+//     .pipe(dest(path.build.html))
+//     .pipe(browsersync.stream());
+// }
 
 
 
@@ -215,7 +226,7 @@ function watchFiles() {
     gulp.watch([path.watch.css], css);
     gulp.watch([path.watch.js], js);
     gulp.watch([path.watch.img], images);
-    gulp.watch([path.watch.php], php);
+    // gulp.watch([path.watch.php], php);
 }
 
 function clean() {
@@ -336,10 +347,10 @@ gulp.task("check-for-favicon-update", function (done) {
 
 
 
-const build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, php), fontsStyle);
+const build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts), fontsStyle);
 const watch = gulp.parallel(build, watchFiles, browserSync);
 
-exports.php = php;
+// exports.php = php;
 exports.fontsStyle = fontsStyle;
 exports.fonts = fonts;
 exports.images = images;
