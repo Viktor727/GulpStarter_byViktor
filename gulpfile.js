@@ -32,9 +32,9 @@ let path = {
 };
 
 // File where the favicon markups are stored
-let FAVICON_DATA_FILE = 'faviconData.json';
+const FAVICON_DATA_FILE = 'faviconData.json';
 
-let { src, dest, tree } = require("gulp"),
+const { src, dest, tree } = require("gulp"),
   gulp = require("gulp"),
   browsersync = require("browser-sync").create(),
   fileinclude = require("gulp-file-include"),
