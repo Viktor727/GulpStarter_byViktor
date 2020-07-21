@@ -31,3 +31,8 @@ Task name          | Description
 `gulp images`                   | convert to webp and compress png, jpg, svg and other format
 `gulp generate-favicon`         | generate favicon images in `src/img/favicon`
 `gulp check-for-favicon-update` | check for update for generate-favicon
+
+### Npm update task
+Task name          | Description                                                      
+:------------------|:----------------------------------
+`npm install lodash@latest` 	                    | update to latest version "lodash"
